@@ -1,3 +1,274 @@
-<a href="/" download="Resume_Nathan-Tabor.pdf">
-  Download Resume
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f8fc">
+  <meta name="description" content="Nathan Tabor — Network+ certified cybersecurity student. View or download my resume.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nathan Tabor | Resume">
+  <meta property="og:description" content="Cybersecurity & IT — view or download my resume.">
+  <title>Nathan Tabor | Resume</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18243b;
+      --muted: #63718a;
+      --line: #e5eaf2;
+      --blue: #265ee5;
+      --blue-dark: #1748c1;
+      --surface: #fff;
+      --background: #f6f8fc;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { min-height: 100%; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      margin: 0;
+      padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
+      background:
+        radial-gradient(ellipse 65% 40% at 50% 16%, rgba(74, 126, 232, .09), transparent 100%),
+        var(--background);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(100%, 760px);
+      min-height: calc(100dvh - 48px);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -.025em;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      border-radius: 12px;
+      background: #1f3152;
+      color: white;
+      font-size: 12px;
+      letter-spacing: -.045em;
+    }
+
+    .topbar-note {
+      color: #728098;
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    main {
+      display: grid;
+      align-items: center;
+      flex: 1;
+      padding: 42px 0 34px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 26px 29px;
+      border: 1px solid rgba(222, 229, 240, .98);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: 0 24px 70px rgba(30, 48, 83, .075), 0 3px 10px rgba(30, 48, 83, .025);
+    }
+
+    .card::before {
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      content: "";
+      background: linear-gradient(90deg, #285be2, #51b6dd);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 20px;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #36a9bd;
+      content: "";
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 10vw, 62px);
+      font-weight: 760;
+      line-height: 1.08;
+      letter-spacing: -.055em;
+    }
+
+    .subtitle {
+      margin: 16px 0 0;
+      color: #354a68;
+      font-size: clamp(16px, 4.3vw, 19px);
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -.018em;
+    }
+
+    .description {
+      max-width: 550px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .divider {
+      height: 1px;
+      margin: 29px 0;
+      background: var(--line);
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 55px;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      padding: 14px 20px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 750;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .button svg { width: 19px; height: 19px; flex-shrink: 0; }
+
+    .button-primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(38, 94, 229, .18);
+    }
+
+    .button-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .button-secondary { border-color: #dbe3ef; background: #fff; color: #2a3a54; }
+    .button-secondary:hover { background: #f6f9fd; border-color: #c1d0e5; }
+    .button:focus-visible { outline: 3px solid #65bce8; outline-offset: 4px; }
+    .button:active { transform: translateY(1px); }
+
+    .helper {
+      margin: 17px 0 0;
+      color: #8190a6;
+      font-size: 12px;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    footer {
+      color: #8894a8;
+      font-size: 12px;
+      letter-spacing: .015em;
+      text-align: center;
+    }
+
+    @media (min-width: 620px) {
+      body { padding: 32px; }
+      .page { min-height: calc(100dvh - 64px); }
+      .card { padding: 55px 58px 43px; border-radius: 28px; }
+      .eyebrow { margin-bottom: 24px; }
+      .description { font-size: 16px; }
+      .divider { margin: 35px 0; }
+      .actions { grid-template-columns: 1.25fr 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand" aria-label="Nathan Tabor">
+        <span class="mark" aria-hidden="true">NT</span>
+        <span>Nathan Tabor</span>
+      </div>
+      <span class="topbar-note">Resume</span>
+    </header>
+
+    <main>
+      <section class="card" aria-labelledby="name">
+        <p class="eyebrow">Cybersecurity &amp; IT</p>
+        <h1 id="name">Nathan Tabor<span aria-hidden="true">.</span></h1>
+        <p class="subtitle">CompTIA Network+ Certified <span aria-hidden="true">·</span> Cybersecurity Student</p>
+        <p class="description">
+          Hands-on experience with security investigations, network troubleshooting,
+          Windows and Linux administration, and practical cybersecurity labs.
+        </p>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <div class="actions">
+          <!-- Keep resume.pdf beside this index.html in your GitHub Pages repository. -->
+          <a class="button button-primary" href="./resume.pdf" download="Nathan_Tabor_Resume.pdf" type="application/pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 17v3h14v-3"/>
+            </svg>
+            Download Resume
+          </a>
+          <a class="button button-secondary" href="./resume.pdf" target="_blank" rel="noopener" type="application/pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 4h6v6m0-6-9 9"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/>
+            </svg>
+            View PDF
+          </a>
+        </div>
+        <p class="helper">One tap to save, or view the PDF right in your browser.</p>
+      </section>
+    </main>
+
+    <footer>© 2026 Nathan Tabor</footer>
+  </div>
+</body>
+</html>
